@@ -91,11 +91,12 @@
         <div class="subtitulo">{{ perfil.carrera }}</div>
 
         <div class="datos">
-            <p><strong>Ubicación:</strong> {{ perfil.region }}</p>
+            <p><strong>Nombre:</strong> {{ perfil.nombre }}</p>
             <p><strong>Contacto:</strong> {{ perfil.correo }}</p>
+            <p><strong>Ubicación:</strong> {{ perfil.region }}</p>
         </div>
 
-        <h3>Redes y Enlaces (RRSS):</h3>
+        <h3>Redes y Enlaces:</h3>
         <ul>
             {% for rrss in perfil.redes_sociales %}
                 <li>
