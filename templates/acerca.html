@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca del Creador - Chile</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .card {
+            background: #ffffff;
+            max-width: 500px;
+            width: 100%;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-top: 6px solid #0032a0;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .subtitulo {
+            color: #d52b1e;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .datos {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .datos p {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        .datos p:last-child {
+            margin-bottom: 0;
+        }
+        h3 {
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        li a {
+            color: #0032a0;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        li a:hover {
+            text-decoration: underline;
+        }
+        .btn-volver {
+            display: inline-block;
+            color: #64748b;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .btn-volver:hover {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>{{ perfil.nombre }}</h2>
+        <div class="subtitulo">{{ perfil.carrera }}</div>
+
+        <div class="datos">
+            <p><strong>Ubicación:</strong> {{ perfil.region }}</p>
+            <p><strong>Contacto:</strong> {{ perfil.correo }}</p>
+            <p><strong>Proyecto:</strong> {{ perfil.proyecto }}</p>
+        </div>
+
+        <h3>Redes y Enlaces (RRSS):</h3>
+        <ul>
+            {% for rrss in perfil.redes_sociales %}
+                <li>
+                    🔹 <a href="{{ rrss.url }}" target="_blank">{{ rrss.plataforma }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <a href="/" class="btn-volver">&larr; Volver al Inicio</a>
+    </div>
+
+</body>
+</html>
