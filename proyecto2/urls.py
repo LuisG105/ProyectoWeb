@@ -17,9 +17,10 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from estaticas.views import index
+from estaticas.views import mostrar_home, mostrar_acerca
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index'),
+    path('', mostrar_home, name='home'),             # Resuelve CASO 1 -> inicio.html
+    path('acerca/', mostrar_acerca, name='acerca'),  # Resuelve CASO 2 -> acerca.html con datos
 ]
