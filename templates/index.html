@@ -142,7 +142,6 @@
                 return;
             }
 
-            // Si se ingresó en centímetros (ej: 175), convertir a metros (1.75)
             if (altura > 3) {
                 altura = altura / 100;
             }
@@ -167,7 +166,6 @@
                 claseColor = "obesidad";
             }
 
-            // Mostrar el resultado en pantalla
             valorIMC.textContent = `Tu IMC: ${imcRedondeado}`;
             estadoIMC.textContent = `Clasificación: ${clasificacion}`;
 
