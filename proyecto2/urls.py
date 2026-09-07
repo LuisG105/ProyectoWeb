@@ -17,10 +17,10 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from estaticas.views import mostrar_home, mostrar_acerca
+from estaticas.views import mostrar_homes, mostrar_acerca
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', mostrar_home, name='home'),            
+    path('', mostrar_homes),            
     path('acerca/', mostrar_acerca, name='acerca'),  
 ]
