@@ -21,6 +21,6 @@ from estaticas.views import mostrar_home, mostrar_acerca
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', mostrar_home, name='home'),             # Resuelve CASO 1 -> inicio.html
-    path('acerca/', mostrar_acerca, name='acerca'),  # Resuelve CASO 2 -> acerca.html con datos
+    path('', mostrar_home, name='home'),            
+    path('acerca/', mostrar_acerca, name='acerca'),  
 ]

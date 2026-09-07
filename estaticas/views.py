@@ -5,11 +5,9 @@ def mostrar_home(request):
 
 def mostrar_acerca(request):
     datos = {
-        'nombre': 'Luis Gutiérrez',
-        'carrera': 'Ingeniería en Informática',
-        'correo': 'lg035540@gmail.com',
+        'nombre': 'Eduardo Molina',
+        'correo': 'EduMoli04@gmail.com',
         'redes_sociales': [
-            {'plataforma': 'GitHub', 'url': 'https://github.com/LuisG105'},
             {'plataforma': 'LinkedIn', 'url': 'https://linkedin.com'},
         ]
     }

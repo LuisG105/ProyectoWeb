@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descubre Chile - Inicio</title>
+    <title>Inicio / Home - Guía Geográfica de Chile</title>
     <style>
         * {
             box-sizing: border-box;
@@ -11,65 +11,145 @@
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
         body {
-            background-color: #f4f6f9;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            background-color: #f1f5f9;
+            color: #334155;
+            line-height: 1.7;
+            padding: 40px 15px;
         }
+
         .container {
+            max-width: 860px;
+            margin: 0 auto;
             background: #ffffff;
-            max-width: 600px;
-            width: 100%;
-            padding: 35px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            text-align: center;
-            border-top: 6px solid #d52b1e; /* Rojo de la bandera chilena */
+            padding: 45px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+            border-top: 6px solid #d52b1e;
         }
-        h1 {
-            color: #0032a0; /* Azul de la bandera chilena */
+
+        header {
+            text-align: center;
+            margin-bottom: 35px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 25px;
+        }
+
+        .badge-home {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #475569;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 4px 14px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             margin-bottom: 12px;
         }
-        p {
-            line-height: 1.6;
-            color: #555;
-            margin-bottom: 20px;
+
+        h1 {
+            color: #0032a0;
+            font-size: 2.1rem;
+            margin-bottom: 10px;
         }
-        .destacados {
+
+        .introduccion {
+            font-size: 1.05rem;
+            color: #475569;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .zona-bloque {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 24px 28px;
+            margin-bottom: 25px;
+            border-left: 5px solid #0032a0;
+        }
+
+        .zona-bloque h2 {
+            color: #0f172a;
+            font-size: 1.35rem;
+            margin-bottom: 8px;
             display: flex;
-            justify-content: space-around;
-            margin: 25px 0;
-            text-align: left;
+            align-items: center;
+            gap: 8px;
         }
-        .caja {
-            background: #f8fafc;
-            padding: 12px 16px;
+
+        .sub-zona {
+            color: #d52b1e;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .zona-bloque p {
+            font-size: 0.96rem;
+            color: #334155;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        .zona-bloque ul {
+            list-style: disc inside;
+            font-size: 0.92rem;
+            color: #475569;
+            padding-left: 8px;
+        }
+
+        .zona-bloque li {
+            margin-bottom: 5px;
+        }
+
+        .datos-destacados {
+            background-color: #eff6ff;
+            border: 1px solid #bfdbfe;
             border-radius: 8px;
-            border-left: 4px solid #0032a0;
+            padding: 22px;
+            margin-top: 30px;
         }
-        .caja h4 {
-            color: #2c3e50;
-            margin-bottom: 4px;
+
+        .datos-destacados h3 {
+            color: #1d4ed8;
+            font-size: 1.15rem;
+            margin-bottom: 10px;
         }
-        .caja span {
-            font-size: 0.9rem;
-            color: #64748b;
+
+        .datos-destacados ul {
+            list-style: disc inside;
+            font-size: 0.93rem;
+            color: #1e3a8a;
         }
-        .btn {
+
+        .datos-destacados li {
+            margin-bottom: 7px;
+        }
+
+        .pie-acciones {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .btn-acerca {
             display: inline-block;
             background-color: #0032a0;
-            color: white;
+            color: #ffffff;
             text-decoration: none;
-            padding: 12px 24px;
+            padding: 13px 30px;
             border-radius: 6px;
             font-weight: 600;
-            transition: background 0.2s;
+            font-size: 1rem;
+            transition: background-color 0.2s ease;
         }
-        .btn:hover {
+
+        .btn-acerca:hover {
             background-color: #002270;
         }
     </style>
@@ -77,25 +157,78 @@
 <body>
 
     <div class="container">
-        <h1>🇨🇱 Descubre Chile</h1>
-        <p>Bienvenido al portal informativo de paisajes y cultura nacional, desde el Desierto de Atacama hasta los glaciares de la Patagonia.</p>
+        <header>
+            <span class="badge-home">Inicio / Home</span>
+            <h1>🇨🇱 Panorama Territorial de Chile</h1>
+            <p class="introduccion">
+                Chile se extiende por más de 4.200 kilómetros de longitud sobre una estrecha franja delimitada entre las altas cumbres de la Cordillera de los Andes y la inmensidad del Océano Pacífico. Esta singular geografía genera una variedad bioclimática excepcional, albergando ecosistemas que van desde la aridez extrema del desierto septentrional hasta los fríos campos de hielo patagónicos.
+            </p>
+        </header>
 
-        <div class="destacados">
-            <div class="caja">
-                <h4>Norte Grande</h4>
-                <span>Desierto y salares</span>
-            </div>
-            <div class="caja">
-                <h4>Zona Central</h4>
-                <span>Valles y cordillera</span>
-            </div>
-            <div class="caja">
-                <h4>Zona Sur</h4>
-                <span>Lagos y fiordos</span>
-            </div>
+        <!-- Bloque 1: Norte Grande -->
+        <section class="zona-bloque">
+            <h2>🏜️ Norte Grande</h2>
+            <span class="sub-zona">Desierto de Atacama, salares y mesetas andinas</span>
+            <p>
+                El Norte Grande chileno está dominado por el Desierto de Atacama, catalogado como el lugar no polar más seco del planeta Tierra. En esta región contrastan las planicies costeras con imponentes farellones, profundas quebradas y el altiplano andino situado a más de 4.000 metros sobre el nivel del mar, donde habitan comunidades originarias que han conservado sus tradiciones ancestrales.
+            </p>
+            <p>
+                Además de ser el motor económico de la minería de cobre y litio más relevante a nivel global, sus cielos poseen una nitidez atmosférica única que atrae a los mayores observatorios astronómicos de la humanidad (como ALMA y Paranal). Entre sus atractivos emblemáticos se encuentran el Valle de la Luna, el Salar de Atacama, los géiseres de El Tatio y los oasis prehispánicos.
+            </p>
+            <ul>
+                <li><strong>Ciudades clave:</strong> Arica, Iquique, Antofagasta y Calama.</li>
+                <li><strong>Clima dominante:</strong> Desértico cálido y desértico de altura en la cordillera.</li>
+                <li><strong>Patrimonio:</strong> Iglesias del altiplano, salitreras de Humberstone y geoglifos de Pintados.</li>
+            </ul>
+        </section>
+
+        <!-- Bloque 2: Zona Central -->
+        <section class="zona-bloque">
+            <h2>🍇 Zona Central</h2>
+            <span class="sub-zona">Valles vitivinícolas, cordillera central y vida urbana</span>
+            <p>
+                La Zona Central es el corazón demográfico, productivo y administrativo de Chile. Se caracteriza por un clima mediterráneo templado, con estaciones bien delimitadas que propician el desarrollo de valles agrícolas fértiles reconocidos mundialmente por la producción de vinos de excelencia (valles de Colchagua, Maipo, Casablanca y Curicó).
+            </p>
+            <p>
+                Esta área reúne a Santiago —el principal centro financiero y cultural del país— junto a ciudades patrimoniales como el puerto de Valparaíso y la ciudad balneario de Viña del Mar. Hacia el este se elevan cumbres andinas de más de 6.000 metros, que ofrecen centros de esquí en invierno y rutas de montañismo durante todo el año.
+            </p>
+            <ul>
+                <li><strong>Ciudades clave:</strong> Santiago, Valparaíso, Viña del Mar y Rancagua.</li>
+                <li><strong>Clima dominante:</strong> Mediterráneo con veranos secos e inviernos moderados y lluviosos.</li>
+                <li><strong>Patrimonio:</strong> Casco histórico de Valparaíso (Patrimonio UNESCO) y tradiciones criollas del campo huaso.</li>
+            </ul>
+        </section>
+
+        <!-- Bloque 3: Zona Sur -->
+        <section class="zona-bloque">
+            <h2>🌲 Zona Sur y Austral</h2>
+            <span class="sub-zona">Lagos, volcanes activos, bosques milenarios y fiordos</span>
+            <p>
+                La Zona Sur y la Patagonia Austral representan uno de los reservorios ecológicos y de agua dulce más puros del mundo. El paisaje está delineado por volcanes cónicos siempre nevados (como el Osorno y el Villarrica), extensos lagos glaciares, densos bosques templados lluviosos de araucarias y alerces milenarios, y la mítica cultura insular del archipiélago de Chiloé con sus iglesias de madera y palafitos.
+            </p>
+            <p>
+                Avanzando hacia el extremo austral, el continente se fragmenta en miles de islas, canales y fiordos esculpidos por los Campos de Hielo Norte y Sur, concluyendo en el imponente Macizo Paine y el Estrecho de Magallanes, antesala del territorio antártico chileno.
+            </p>
+            <ul>
+                <li><strong>Ciudades clave:</strong> Concepción, Temuco, Valdivia, Puerto Montt y Punta Arenas.</li>
+                <li><strong>Clima dominante:</strong> Templado lluvioso oceánico y tundra de altura hacia el sur austral.</li>
+                <li><strong>Patrimonio:</strong> Parque Nacional Torres del Paine, Iglesias de Chiloé y reservas de la biosfera.</li>
+            </ul>
+        </section>
+
+        <!-- Resumen de datos -->
+        <div class="datos-destacados">
+            <h3>📌 Síntesis Geográfica Nacional</h3>
+            <ul>
+                <li><strong>Superficie continental:</strong> 756.102 km² sin incluir el Territorio Chileno Antártico.</li>
+                <li><strong>Límites:</strong> Al norte limita con Perú, al este con Bolivia y Argentina, al sur con el Polo Sur y al oeste con el Océano Pacífico.</li>
+                <li><strong>Biodiversidad:</strong> Elevado nivel de endemismo en flora y fauna gracias a sus barreras biogeográficas naturales (desierto, cordillera, océano e hielos).</li>
+            </ul>
         </div>
 
-        <a href="/acerca/" class="btn">Ver ficha del autor y proyecto &rarr;</a>
+        <div class="pie-acciones">
+            <a href="/acerca/" class="btn-acerca">Ver información del autor y ficha del proyecto &rarr;</a>
+        </div>
     </div>
 
 </body>
