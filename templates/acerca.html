@@ -96,15 +96,6 @@
             <p><strong>Ubicación:</strong> {{ perfil.region }}</p>
         </div>
 
-        <h3>Redes y Enlaces:</h3>
-        <ul>
-            {% for rrss in perfil.redes_sociales %}
-                <li>
-                    🔹 <a href="{{ rrss.url }}" target="_blank">{{ rrss.plataforma }}</a>
-                </li>
-            {% endfor %}
-        </ul>
-
         <a href="/" class="btn-volver">&larr; Volver al Inicio</a>
     </div>
 
